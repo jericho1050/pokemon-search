@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #FF2E63;
+    --secondary-color: #EAEAEA;
+    --background-color: linear-gradient(90deg, rgba(8, 217, 214, 1) 0%, rgba(8, 170, 217, 1) 100%);
+    --background-container-color: #252A34;
+    --gradient-border: linear-gradient(var(--background-container-color), var(--background-container-color)) padding-box,
+        var(--background-color) border-box;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-color);
+    font-family: Montserrat, sans-serif;
+    padding: 1.5em;
+    margin: 0;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: max(1.5em, 4vw);
+}
+
+.container {
+    background-color: var(--background-container-color);
+    color: white;
+    padding: 1em 1.5em;
+    border-radius: 1.4em;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+form {
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.2em;
+    margin-bottom: 2em;
+
+
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 0.7em;
+    text-align: center;
+    margin: 0.9em auto;
+}
+
+input[id="search-input"] {
+    border-radius: 0.4em;
+    padding: 0.6em 1em;
+    margin: 0;
+    border: unset;
+    width: 150px;
+    margin-right: 0.25em;
+    background-color: var(--secondary-color);
+
+}
+
+input[id="search-input"]:focus {
+    outline-color: #FF2E63;
+}
+
+svg {
+    width: 1.5em;
+    height: 1.5em;
+    margin-bottom: -0.4em;
+}
+
+button[id="search-button"] {
+    margin: 0;
+    height: 2.5em;
+    width: 4.5em;
+    border-radius: 1em;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: unset;
+}
+
+button[id="search-button"]:hover {
+    background-color: #f0295b;
+}
+
+.name-and-id {
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    margin: 1em auto 0.5em;
+}
+
+.empty {
+    height: 10em;
+    width: 10em;
+    background-color: var(--secondary-color);
+    opacity: 0.2;
+    margin: auto;
+}
+
+.sprite-container {
+    background: var(--gradient-border);
+    border: 2px solid transparent;
+    position: relative;
+    display: grid;
+    place-content: center;
+    margin-bottom: 0.5em;
+}
+
+.size {
+    position: absolute;
+    left: 1.2em;
+    top: 1em;
+    font-size: small;
+}
+
+#sprite {
+    width: 10em;
+    height: 10em;
+    margin: 1.5em auto;
+}
+
+ul[id="types"] {
+    position: absolute;
+    display: flex;
+    gap: 0.69em;
+    bottom: 1em;
+    left: 1.2em;
+    padding: 0;
+    font-size: x-small;
+}
+
+ul[id="types"] li {
+    list-style: none;
+    color: var(--background-container-color);
+    padding: 0.5em 0.8em;
+    font-weight: 600;
+}
+
+/* ul[id="types"] li:nth-child(1) {
+    background-color: #8DCA65;
+
+}
+
+ul[id="types"] li:nth-child(2) {
+    background-color: #BD8DB5;
+} */
+
+
+table,
+th,
+td {
+    margin: 1.5em 0;
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.5em 1em;
+    width: 100%;
+}
+
+@media(min-width: 1050px) {
+    .container {
+        max-width: 720px;
+
+    }
+
+    label {
+        font-size: 1.5em;
+    }
+
+    input[id="search-input"] {
+        width: 270px;
+        margin-right: 1em;
+        text-align: center;
+        font-size: larger
+    }
+
+    svg {
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    button[id="search-button"] {
+        height: 4.5em;
+        width: 8.5em;
+
+    }
+
+    .name-and-id {
+        font-size: 2em;
+    }
+
+    .empty {
+        height: 16em;
+        width: 12em;
+        background-color: var(--secondary-color);
+        opacity: 0.2;
+        margin-right: 0.69em;
+    }
+
+
+    .wrapper {
+        display: grid;
+        grid-template-areas: "sprite-container stats-table";
+        justify-content: center;
+
+    }
+
+    .left-col {
+        grid-area: sprite-container;
+    }
+
+    .right-col {
+        grid-area: stats-table;
+    }
+
+    .sprite-container {
+        margin: 0 1.5em 1.5em;
+    }
+
+    #sprite {
+        width: 13em;
+        height: 13em;
+        /* margin: 1.5em auto; */
+    }
+
+    table,
+    th,
+    td {
+        margin: 0;
+        padding: 0.5em 1em;
+        width: 100%;
+    }
+}
+
+/* Utility classes for pokemon special types */
+.normal {
+    background-color: #b7b7aa;
+}
+
+.fire {
+    background-color: #ff6f52;
+}
+
+.water {
+    background-color: #42a1ff;
+}
+
+.electric {
+    background-color: #fecc33;
+}
+
+.grass {
+    background-color: #78cc55;
+}
+
+.ice {
+    background-color: #66ccfe;
+}
+
+.fighting {
+    background-color: #d3887e;
+}
+
+.poison {
+    background-color: #c68bb7;
+}
+
+.ground {
+    background-color: #dfba52;
+}
+
+.flying {
+    background-color: #8899ff;
+}
+
+.psychic {
+    background-color: #ff66a3;
+}
+
+.bug {
+    background-color: #aabb23;
+}
+
+.rock {
+    background-color: #baaa66;
+}
+
+.ghost {
+    background-color: #9995d0;
+}
+
+.dragon {
+    background-color: #9e93f1;
+}
+
+.dark {
+    background-color: #b59682;
+}
+
+.steel {
+    background-color: #abaabb;
+}
+
+.fairy {
+    background-color: #ed99ed;
+}

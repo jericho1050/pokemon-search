@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>
+        Pokémon Search App
+    </h1>
+    <div class="container">
+        <form>
+            <label for="search-input">Search for Pokémon Name or ID: </label>
+            <div class="input-container">
+                <input id="search-input" required>
+                <button id="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M25.875 15.75C25.875 17.0796 25.6131 18.3962 25.1042 19.6247C24.5954 20.8531 23.8496 21.9692 22.9095 22.9095C21.9692 23.8495 20.8531 24.5954 19.6246 25.1044C18.3962 25.6131 17.0796 25.875 15.75 25.875C14.4203 25.875 13.1037 25.6131 11.8753 25.1044C10.6469 24.5954 9.53071 23.8495 8.59053 22.9095C7.65032 21.9692 6.90454 20.8531 6.3957 19.6247C5.88686 18.3962 5.62498 17.0796 5.62498 15.75C5.62498 13.0647 6.69171 10.4893 8.59053 8.59054C10.4893 6.69172 13.0647 5.62499 15.75 5.62499C18.4353 5.62499 21.0106 6.69172 22.9095 8.59054C24.8083 10.4893 25.875 13.0647 25.875 15.75ZM24.03 26.415C21.3173 28.521 17.9041 29.5139 14.485 29.1917C11.066 28.8697 7.89825 27.2567 5.62667 24.6811C3.35507 22.1056 2.15042 18.7611 2.25793 15.3287C2.36545 11.8962 3.77706 8.63369 6.20537 6.20538C8.63371 3.77707 11.8962 2.36546 15.3287 2.25794C18.7612 2.15042 22.1056 3.35508 24.6812 5.62668C27.2567 7.89826 28.8698 11.066 29.1917 14.485C29.5139 17.9041 28.521 21.3173 26.415 24.03L33.255 30.87C33.4208 31.0246 33.5538 31.2109 33.6461 31.4179C33.7383 31.6249 33.7878 31.8483 33.7919 32.0749C33.7959 32.3014 33.7541 32.5264 33.6692 32.7366C33.5844 32.9467 33.458 33.1375 33.2978 33.2977C33.1376 33.4582 32.9468 33.5844 32.7366 33.6692C32.5265 33.754 32.3015 33.7959 32.0749 33.7918C31.8483 33.7878 31.6247 33.7383 31.4179 33.646C31.2109 33.5538 31.0246 33.4208 30.87 33.255L24.03 26.415Z"
+                            fill="white" />
+                    </svg>
+                </button>
+            </div>
+        </form>
+
+        <div class="name-and-id">
+            <span id="pokemon-name"></span>
+            <span id="pokemon-id"></span>
+        </div>
+        <div class="wrapper">
+
+            <div class="left-col empty">
+                <div>
+                    <div class="size">
+                        <span id="height"></span>
+                        <span id="weight"></span>
+                    </div>
+                    <img id="sprite">
+                    <ul id="types">
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class="right-col">
+                <table>
+                    <tr>
+                        <th>Base</th>
+                        <th>Stats</th>
+                    </tr>
+                    <tr>
+                        <td>HP:</td>
+                        <td id="hp"></td>
+                    </tr>
+                    <tr>
+                        <td>ATTACK:</td>
+                        <td id="attack"></td>
+                    </tr>
+                    <tr>
+                        <td>DEFENSE:</td>
+                        <td id="defense"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Sp. Attack:</td>
+                        <td id="special-attack"></td>
+                    </tr>
+                    <tr>
+                        <td>Sp. Defense:</td>
+                        <td id="special-defense"></td>
+                    </tr>
+                    <tr>
+                        <td>Speed:</td>
+                        <td id="speed"></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
